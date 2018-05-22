@@ -119,11 +119,11 @@
             const html = matchArray.map(place => {
                 const regex = new RegExp(this.value, 'gi');
                 const cityName = place.city.replace(regex, `<span class="h1">${this.value}</span>`);
-                const stateName = place.name.replace(regex, `<span class="h1">${this.value}</span>`);
+                const airportName = place.name.replace(regex, `<span class="h1">${this.value}</span>`);
                 return `
                     <li>
-                        <span class="name">${cityName}, ${stateName}</span>
-                        <span class="code">${numberWithCommas(place.code)}</span>
+                        <span class="name">${cityName}, ${airportName}</span>
+                        <span class="code">${place.code}</span>
                     </li>
                 `;
             }).join('');
